@@ -1,24 +1,26 @@
 # Prompt: Open Terminal From Finder
 
-请帮我在 macOS 上开发一个 Finder 右键菜单功能，名称叫 `打开 Terminal`。
+Please help me build a macOS Finder right-click action named `Open Terminal`.
 
-目标是：我在 Finder 中操作时，可以通过右键快速打开 Terminal，并自动切换到合适的目录。请满足以下规则：
+Goal: when I work inside Finder, I want to open Terminal from the context menu and automatically land in the correct directory.
 
-1. 这个功能必须集成到 macOS Finder 的右键菜单中，推荐使用 Finder 快速操作、服务或等效方案。
-2. 如果我选中了某个文件，打开 Terminal 时应自动切换到该文件所在的目录。
-3. 如果我选中了某个文件夹，打开 Terminal 时应自动切换到该文件夹本身。
-4. 如果我没有选中任何文件，而是在 Finder 当前窗口的空白区域触发右键菜单，则 Terminal 应自动切换到当前 Finder 正在显示的目录。
-5. 生成的实现必须正确处理带空格、中文、特殊字符的路径。
-6. 请优先输出一个可直接安装到 `~/Library/Services/` 的 macOS Automator `.workflow` 方案，或者生成一个安装脚本来自动创建这个工作流。
-7. 请直接输出完整可执行实现，不要只解释思路。
-8. 如果 Finder 不能立刻显示该菜单项，请附带 Finder 刷新方式。
+Requirements:
 
-请按下面的格式输出：
+1. The feature must be integrated into the macOS Finder right-click menu, preferably as a Finder Quick Action, Service, or an equivalent native solution.
+2. If I select a file, Terminal should open in that file's parent directory.
+3. If I select a folder, Terminal should open in that folder itself.
+4. If I do not select anything and trigger the action from the blank area of the current Finder window, Terminal should open in the directory currently shown by Finder.
+5. The implementation must handle paths with spaces, non-English characters, and special characters correctly.
+6. Prefer a solution that can be installed into `~/Library/Services/` as a macOS Automator `.workflow`, or generate an installation script that creates the workflow automatically.
+7. Please provide a complete executable implementation, not just a description of the idea.
+8. If Finder does not show the menu item immediately, also include how to refresh Finder.
 
-1. 实现思路简介
-2. 完整安装脚本
-3. 安装后菜单名称
-4. 具体行为说明
-5. 卸载方式
+Please format the response like this:
 
-请默认目标终端是 macOS 自带的 Terminal。
+1. Short implementation overview
+2. Full installation script
+3. Installed menu item name
+4. Behavior details
+5. Uninstall instructions
+
+Assume the target terminal app is the built-in macOS Terminal.

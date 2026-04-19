@@ -1,26 +1,28 @@
 # Prompt: Show And Copy Full Path
 
-请帮我在 macOS 上开发一个 Finder 右键菜单功能，名称叫 `显示并复制完整路径`。
+Please help me build a macOS Finder right-click action named `Show and Copy Full Path`.
 
-目标是：当我在 Finder 中选中文件或文件夹后，右键即可执行该功能，并满足以下要求：
+Goal: when I select a file or folder in Finder and right-click it, I want to run this action from the Finder context menu.
 
-1. 这个功能必须集成到 macOS Finder 的右键菜单中，推荐使用 Finder 快速操作、服务或等效方案。
-2. 当我选中一个文件时，执行后要显示这个文件的完整绝对路径。
-3. 当我选中一个文件夹时，执行后要显示这个文件夹的完整绝对路径。
-4. 执行后要自动把完整路径复制到系统剪贴板。
-5. 最好弹出一个简单对话框，让我确认刚刚复制的路径内容。
-6. 如果支持多选，请把多个路径按换行拼接后复制到剪贴板。
-7. 生成结果时，请直接给出可安装的完整实现，而不是只讲思路。
-8. 请优先输出一个可直接安装到 `~/Library/Services/` 的 macOS Automator `.workflow` 方案，或者生成一个安装脚本来自动创建这个工作流。
-9. 请确保路径中包含空格、中文、特殊字符时也能正常处理。
-10. 如果 Finder 不能立刻显示该菜单项，请顺便告诉我如何刷新 Finder。
+Requirements:
 
-请按下面的格式输出：
+1. The feature must be integrated into the macOS Finder right-click menu, preferably as a Finder Quick Action, Service, or an equivalent native solution.
+2. When I select a file, the action should show that file's full absolute path.
+3. When I select a folder, the action should show that folder's full absolute path.
+4. The full path should also be copied to the system clipboard automatically.
+5. Prefer showing a simple confirmation dialog so I can see what was copied.
+6. If multi-selection is supported, copy all selected paths joined by line breaks.
+7. Do not only explain the approach. Please provide a complete installable implementation.
+8. Prefer a solution that can be installed into `~/Library/Services/` as a macOS Automator `.workflow`, or generate an installation script that creates the workflow automatically.
+9. Make sure paths with spaces, non-English characters, and special characters are handled correctly.
+10. If Finder does not show the menu item immediately, also explain how to refresh Finder.
 
-1. 简要说明采用的实现方案
-2. 完整可运行的安装脚本
-3. 安装后的菜单名称
-4. 使用说明
-5. 如果需要，附上卸载方式
+Please format the response like this:
 
-不要只给伪代码，请直接给可执行内容。
+1. Short explanation of the implementation approach
+2. Full working installation script
+3. Installed menu item name
+4. Usage instructions
+5. Uninstall instructions if needed
+
+Please provide executable content, not pseudocode.
